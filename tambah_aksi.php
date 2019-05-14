@@ -6,7 +6,7 @@
     $tanggal = date("Y-m-d H:i:s");
   
     $sql = "INSERT INTO post VALUES('','$title','$isi','$tanggal')";
-mysqli_query($db,$sql);
+    mysqli_query($db,$sql);
 
     header("location:home.php");
 ?>

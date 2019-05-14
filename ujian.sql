@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2019 pada 15.51
+-- Waktu pembuatan: 14 Bulan Mei 2019 pada 06.29
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.1
 
@@ -40,11 +40,12 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id_post`, `title`, `isi`, `tanggal`) VALUES
-(18, 'Harimau Sumatera', 'Harimau sumatera salah satu hewan langka yang dilindungi di indonesia. Saat ini jumlahnya semakin sedikit, Keberadaannya terganggu oleh manusia yang sekarang ini sering melakukan penebangan liar dan memburunya. Harimau Sumatera mempunyai warna paling gelap di antara semua subspesies harimau lainnya. Harimau Sumatra jantan memiliki panjang rata-rata 92 inci dengan berat 300 pound atau sekitar 140kg, sedangkan tinggi dari jantan dewasa dapat mencapai 60cm. Betinanya rata-rata memiliki panjang 78 inci dan berat sekitar 91kg.', '2019-03-12 15:47:09'),
-(19, 'Badak Bercula Satu', 'Badak bercula satu atau lebih di kenal dengan badak jawa adalah hewan yang saat ini hampir punah dan hanya bisa kita temui di taman nasional ujung kulon. Sangat disayangkan sekali memang, karena Hewan ini banyak diburu oleh manusia untuk di ambil culahnya. Mereka mengambil culah badak ini untuk digunakan sebagai obat. Badak ini sangat mematikan jika menyerang musuhnya karena memiliki culah yang sangat tajam. Akan tetapi culahnya ini biasa digunakan untuk mencari makanan. Sedangkan makanannya sendiri adalah tumbuh-tumbuhan.', '2019-03-12 15:41:45'),
-(20, 'Burung Merak', 'Burung merak adalah burung yang saat ini sangat sulit kita jumpai. Burung ini sangat indah dan pasti membuat orang yang melihat ingin memilikinya. Hewan ini hampir punah, dan hewan ini sangat dilindungi oleh pemerintah. Hewan ini hidup di hutan terbuka yang memiliki padang rumput luas. Keberadaan hewan ini tak hanya ada di indonesia melainkan ada juga di negara lain seperti china, India dan Malaysia. Burung Merak memakan aneka biji-bijian, pucuk rumput dan dedaunan, aneka serangga, serta berbagai jenis hewan kecil seperti laba-laba, cacing dan kadal kecil.', '2019-03-12 15:44:31'),
-(21, 'Orang Utan', 'Orang utan adalah hewan jenis kera yang memiliki rambut lebih panjang daripada jenis kera yang lain. Hewan ini Tersebar di hutan kalimantan dan hutan Sumatra. Orang Utan sendiri berasal dari bahasa indosnesia yang artinya adalah manusia yang hidup di hutan. Memang orang utan memiliki banyak kesamaan dengan manusia. dari segi bentuk dan DNA hampir sama. Makanan utamanya adalah buah-buahan. Ancaman orangutan adalah habitat yang semakin sempit karena kawasan hutan dijadikan sebagai lahan kelapa sawit, pertambangan dan pepohonan ditebang.', '2019-03-12 15:47:25'),
-(22, 'Kijang', 'Kijang atau muncak adalah kerabat rusa yang tergabung dalam genus Muntiacus. Kijang berasal dari Dunia Lama dan dianggap sebagai jenis rusa tertua, telah ada sejak 15-35 juta tahun yang lalu, dengan sisa-sisa dari masa Miosen ditemukan di Perancis dan Jerman. Pada masa sekarang, muncak hanya dapat ditemui di Asia Selatan dan Asia Tenggara, mulai dari India, Srilangka, Indocina, hingga kepulauan Nusantara. Beberapa jenis diintroduksi di Inggris dan sekarang banyak dijumpai di sana. Kijang tidak mengenal musim kawin dan dapat kawin kapan saja.', '2019-03-12 15:47:51');
+(38, 'Meteor', 'Meteor adalah benda langit yang masuk ke dalam wilayah atmosfer bumi yang mengakibatkan terjadinya gesekan permukaan metor dengan udara dalam kecepatan tinggi. Akibat adanya gesekan yang yang cepat tersebut menimbulkan pijaran api dan cahaya yang dari kejauhan kita melihatnya seperti bintang jatuh.', '2019-05-14 05:07:10'),
+(39, 'Meteorit', 'Meteorit adalah benda-benda di luar angkasa dengan kecepatan yang cepat. Jumlah meteorit di angkasa raya tidak terhitung karena sangat banyak dengan berbagai bentuk, jenis, bahan kandungan, warna, sifat dan sebagainya.', '2019-05-14 05:07:52'),
+(40, 'Komet', 'Komet adalah benda langit yang mengelilingi matahari. Komet memiliki orbit garis edar sendiri yang bentuknya sangat lonjong. Komet biasa disebut sebagai bintang berekor karena sifatnya yang bercahaya terang dan memiliki ekor gas debu yang sangat panjang.', '2019-05-14 05:08:29'),
+(41, 'Satelit', 'Satelit adalah benda yang mengelilingi planet yang memiliki orbit peredaran sendiri. Satelit bersama planet yang dikelilinginya secara bersama-sama mengelilingi bintang. Bulan adalah satelit alami yang dimiliki oleh bumi yang bersama bumi mengelilingi matahari, sedangkan satelit palapa, satelit b1, dan sebagainya adalah satelit buatan manusia yang digunakan untuk tujuan tertentu seperti untuk komunikasi, mata-mata, riset, dan lain sebagainya.', '2019-05-14 05:09:10'),
+(42, 'Bintang', 'Bintang adalah benda langit luar angkasa yang memiliki ukuran besar dan memancarkan cahaya sebagai sumber cahaya. Bintang yang terdekat dengan bumi adalah matahari. Matahari dikelilingi oleh planet-planet anggota tata surya seperti pelanet bumi, merkurius, venus, mars, jupiter, saturnus, uranus, neptunus dan jupiter.', '2019-05-14 05:09:50'),
+(43, 'Planet', 'Planet adalah benda langit yang mengelilingi bintang sebagai pusat tata surya. Planet tidak dapat menghasilkan cahaya sendiri namun dapat memantulkan cahaya. Planet yang dekat dengan bumi dapat kita lihat setiap hari dengan mata telanjang seperti planet venus yang disebut orang sebagai bintang fajar.', '2019-05-14 05:10:15');
 
 -- --------------------------------------------------------
 
@@ -62,17 +63,20 @@ CREATE TABLE `user` (
   `biografi` text NOT NULL,
   `gender` varchar(20) NOT NULL,
   `website` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `level` varchar(40) NOT NULL
+  `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `usia`, `nim`, `jurusan`, `biografi`, `gender`, `website`, `email`, `level`) VALUES
-(53, 'Sela Pebraini', '8c9a14ffebb7677d033ffce847991293', 18, '09031181823137', 'Sistem Informasi', 'Haeee', 'Perempuan', 'www.google.com', 'selamodric29@gmail.com', 'admin'),
-(54, 'Rifki Andrian', 'db9eeb7e678863649bce209842e0d164', 15, '09031381823144', 'Sistem Komputer', 'Blalala', 'Laki - Laki', 'www.google.com', 'rifki@gmail.com', 'admin');
+INSERT INTO `user` (`id`, `username`, `password`, `usia`, `nim`, `jurusan`, `biografi`, `gender`, `website`, `email`) VALUES
+(53, 'Sela Pebraini', '8c9a14ffebb7677d033ffce847991293', 18, '09031181823137', 'Sistem Informasi', 'Haeee', 'Perempuan', 'www.google.com', 'selamodric29@gmail.com'),
+(60, 'Frisca Dwi', 'b59c67bf196a4758191e42f76670ceba', 18, '09031181822543', 'Manajemen Informatik', 'Blalala', 'Perempuan', 'www.unsri.ac.id', 'dwi28@gmail.com'),
+(61, 'Indri Kurniawan Saputra', '5a142a55461d5fef016acfb927fee0bd', 24, '09031381824537', 'Komputerisasi Akunta', 'Apa lu!', 'Laki - Laki', 'www.google.com', 'gembele@gmail.com'),
+(62, 'hhh', 'a3aca2964e72000eea4c56cb341002a4', 14, '1234', 'Komputerisasi Akunta', 'Bjlwjfe', 'Perempuan', 'www.google.unsri.ac.id', 'dwi@gmail.com'),
+(63, 'sela', '81dc9bdb52d04dc20036dbd8313ed055', 12, '09098765', 'Manajemen Informatik', 'bjjnkjkjk', 'Perempuan', 'www.google.unsri.ac.id', 'dwi@gmail.com'),
+(64, 'hodf', '072971eec561bbcf8e7bd93bdb0d5e6b', 0, 'jepo', 'Sistem Informasi', 'kklfr', '', 'nkkl', '');
 
 --
 -- Indexes for dumped tables
@@ -98,13 +102,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `post`
 --
 ALTER TABLE `post`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

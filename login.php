@@ -1,8 +1,6 @@
-
 <?php
    session_start();
-   if(isset($_SESSION['username'])) {
-   header('location:admin.php'); }
+   if(isset($_SESSION['username'])) 
    require_once("koneksi1.php");
 ?>
 
@@ -13,13 +11,13 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" href="style2.css">
-	<form action="proseslogin.php" method="post">
+	<form action="home.php" method="post">
 </head>
-<body style="background: url(4.jpg);">
+<body style="background: url(u.jpg);">
 
 
 	<div class="box">
-		<h2>Login</h2>
+		<h2></h2>
 	<form>
 		<div class="inputBox">
 		<input type="text" name="username" required=""> 
@@ -33,7 +31,7 @@
 		<label>remeber me</label>
 		<input type="checkbox" name="remeber"> 
 		</div> -->
-		<input type="submit" name="submit" value="submit">
+		<input type="submit" name="submit" value="Submit">
 		<button><a href="daftar.php">Registration</a></button>
 	
 	</form>

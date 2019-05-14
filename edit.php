@@ -1,22 +1,5 @@
 <?php
-session_start();
-//cek apakah user sudah login
-if(!isset($_SESSION['username'])){
 
-    echo "<center><h2>ANDA BELUM LOGIN</h2><a href='login.php'>Silahkan login </a> <br></center>" ;
-   die(); 
-}
-
-    
-//cek level user
-if($_SESSION['level']!="admin"){
-  header('location:../manager.php');
-    // die("Anda bukan manager");
-    //jika bukan admin jangan lanjut
-}else{
-  $username = $_SESSION['username']; 
-  $level=$_SESSION['level'];
-}
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +11,7 @@ if($_SESSION['level']!="admin"){
     <title>Edit</title>
     <link href="style1.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <h3>Edit Data</h3>
+<body style="background: url(s.jpg);"> 
     <br><br>
     <?php
         include 'koneksi1.php';
@@ -40,19 +22,19 @@ if($_SESSION['level']!="admin"){
     <form method="post" action="update.php">
         <table align="center">
             <tr>
-                <td>TITLE</td>
+                <td>Title :</td>
                 <td>
                     <input type="hidden" name="id_post" value="<?php echo $d['id_post'] ;?>">
                     <input type="text" name="title" value="<?php echo $d['title'] ;?>">
                 </td>
             </tr>
             <tr>
-                <td>CONTENT</td>
+                <td>Content :</td>
                 <td><input type="text" name="isi" value="<?php echo $d['isi'] ;?>"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Simpan"></td>
+                <td><input type="submit" value="Submit"></td>
             </tr>
         </table>
     </form>

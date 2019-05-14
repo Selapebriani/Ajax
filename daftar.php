@@ -1,7 +1,6 @@
 <?php
    session_start();
-   if(isset($_SESSION['username'])) {
-   header('location:home.php'); }
+   if(isset($_SESSION['username'])) 
 ?>
 
 <!DOCTYPE HTML>  
@@ -12,13 +11,13 @@
 </style>
 <form action="prosesdaftar.php" method="post"> 
 </head>
-<body style="background: url(3.jpg);">
+<body style="background: url(t.jpg);">
   
 
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = $usiaErr = $nimErr = $biografiErr = $jurusanErr = "";
-$username = $password = $passErr = $email = $gender = $biografi = $website = $nim = $jurusan = $usia = "";
+$username = $pass = $passErr = $email = $gender = $biografi = $website = $nim = $jurusan = $usia = "";
 
 date_default_timezone_set('Asia/Jakarta');
 
@@ -44,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["password"])) {
     $passErr = "password is required";
   } else {
-    $nim = test_input($_POST["password"]);
-    if (!preg_match("/^[0-9 ]*$/",$password)) {
-      $nimErr = "Only Numbers allowed"; 
+    $pass = test_input($_POST["password"]);
+    if (!preg_match("/^[0-9 ]*$/",$pass)) {
+      $passErr = "error"; 
     }
   }
 
@@ -107,7 +106,7 @@ function test_input($data) {
 }
 ?>
 
-<center><h2 style="color: darkblue">FORM DATA</h2>
+<center><h2 style="color:black">===============Form Pendaftaran===============</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 
@@ -140,6 +139,9 @@ function test_input($data) {
      <option value="Sistem Informasi">Sistem Informasi</option>
      <option value="Sistem Komputer">Sistem Komputer</option>
      <option value="Teknik Informatika">Teknik Informatika</option>
+     <option value="Manajemen Informatika">Manajemen Informatika</option>
+     <option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+     <option value="Teknik Komputer">Teknik Komputer</option>
   </select>
   <span class="error">* <?php echo $jurusanErr;?></span></td>
   </tr>
@@ -163,16 +165,6 @@ function test_input($data) {
   <span class="error">* <?php echo $websiteErr;?></span></td>
   </tr>
   <tr>
-   <td>Level</td>
-   <td>:<form action="/action_page.php">
-  <select name="level">
-    <option value="">-Pilih Level-</option>
-     <option value="admin">Admin</option>
-     <option value="manager">Manager</option>
-  </select>
-  <span class="error">* <?php echo $jurusanErr;?></span></td>
-  </tr>
-  <tr>
    <td>Biografi</td>
    <td>:<textarea name="biografi"><?php echo $biografi;?></textarea><span class="error">* <?php echo $biografiErr;?></span></td>
   </tr>
@@ -180,7 +172,7 @@ function test_input($data) {
   </tr>
   <tr>
    <td colspan="2"><input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="reset">
+    <input type="reset" name="reset" value="Reset">
    </td>
   </tr>
 

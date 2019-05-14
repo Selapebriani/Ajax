@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Blog</title>
+    <title>Index</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
     <![endif]-->
   </head>
 
-  <body style="background: url(3.jpg);">
+  <body style="background: url(k.jpg);">
     <form id="form-container" class="form-container">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -41,7 +41,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.php">Dashboard</a></li>
+            <li><a href="idx.php">Dashboard</a></li>
           </ul>
         </div>
       </div>
@@ -51,7 +51,8 @@
       <div class="row">
         <div class="col-sm-2 col-md-1 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="home.php">BLOG</a></li>
+            <li class="active"><a href="idx.php">BLOG</a></li>
+            <li class=><a href="login.php">SIGN IN</a></li>
             <br>
               <label for="input">Wikipedia : </label>
               <input type="text" id="input" value="">
@@ -66,16 +67,14 @@
         <div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-2 main">
            <div class="kol2">
             <a name="tabel" class="tabela">
-                <h3 align="center" style="background-color: white">NAMA - NAMA HEWAN</h3>
-                <a href="tambah.php"><input type="button" value="Tambah"></a>
+                <h3 align="center" style="background-color: white">WELCOME TO BLOG SELA</h3>
                 <br>
                 <table align="center" rules="all" border="1" style="background-color: white">
                     <tr style=""> 
                         <th><center>No</center></th>
-                        <th><center>Tittle</center></th>
+                        <th><center>Title</center></th>
                         <th><center>Content</center></th> 
                         <th><center>Terakhir diakses</center></th>     
-                        <th><center>Opsi</center></th>
                     </tr>
                     <?php
                         include "koneksi1.php";
@@ -88,9 +87,6 @@
                         <td><?php echo $d['title']; ?></td>
                         <td><?php echo $d['isi']; ?></td>
                          <td><?php echo $d['tanggal']; ?></td>
-
-  
-                        <td><a href="edit.php?id_post=<?php echo $d['id_post']; ?>"><input type="button" value="Edit" title="Edit"></a></td>
 
                     </tr>
                     <?php

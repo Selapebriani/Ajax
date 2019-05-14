@@ -1,20 +1,3 @@
-<?php
-session_start();
-//cek apakah user sudah login
-if(!isset($_SESSION['username'])){
-    die("Maaf Anda belum login...");//jika belum login jangan lanjut
-}
-//cek level user
-if($_SESSION['level']!="admin"){
-  header('location:../manager.php');
-    // die("Anda bukan manager");
-    //jika bukan admin jangan lanjut
-}else{
-  $username = $_SESSION['username']; 
-  $level=$_SESSION['level'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +8,7 @@ if($_SESSION['level']!="admin"){
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +26,7 @@ if($_SESSION['level']!="admin"){
     <![endif]-->
   </head>
 
-  <body style="background: url(3.jpg);">
+  <body style="background: url(k.jpg);">
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -54,15 +37,11 @@ if($_SESSION['level']!="admin"){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><b><?php echo $username;?></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="home.php">Dashboard</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>
@@ -73,19 +52,19 @@ if($_SESSION['level']!="admin"){
           <ul class="nav nav-sidebar">
             <li class="active"><a href="home.php">BLOG</a></li>
            
-            <li><a href="logout.php" onclick="javascript: return confirm('Anda yakin ingin keluar ?')">LOGOUT</a></li>
+            <li><a href="logout.php" onclick="javascript: return confirm('Are you sure want to leave?')">SIGN OUT</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-2 main">
            <div class="kol2">
             <a name="tabel" class="tabela">
-                <h3 align="center" style="background-color: white">NAMA - NAMA HEWAN</h3>
-                <a href="tambah.php"><input type="button" value="Tambah"></a>
+                <h3 align="center" style="background-color: white">WELCOME TO BLOG SELA</h3>
+                <a href="tambah.php"><input type="button" value="Add"></a>
                 <br>
                 <table align="center" rules="all" border="1" style="background-color: white">
                     <tr style=""> 
                         <th><center>No</center></th>
-                        <th><center>Tittle</center></th>
+                        <th><center>Title</center></th>
                         <th><center>Content</center></th> 
                         <th><center>Terakhir diakses</center></th>     
                         <th><center>Opsi</center></th>
@@ -104,7 +83,7 @@ if($_SESSION['level']!="admin"){
 
   
                         <td><a href="edit.php?id_post=<?php echo $d['id_post']; ?>"><input type="button" value="Edit" title="Edit"></a>
-                            <a href="hapus.php?id_post=<?php echo $d['id_post']; ?>"  onclick="javascript: return confirm('Anda yakin ingin menghapus ?')"><input type="button" value="Delete" title="Hapus" class="del"></a> </td>
+                            <a href="hapus.php?id_post=<?php echo $d['id_post']; ?>"  onclick="javascript: return confirm('Are you sure deleting this post ?')"><input type="button" value="Delete" title="Hapus" class="del"></a> </td>
 
                     </tr>
                     <?php

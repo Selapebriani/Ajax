@@ -6,7 +6,7 @@ if(!isset($_SESSION['username'])){
 }
 //cek level user
 if($_SESSION['level']!=""){
-	header('location:home.php');
+	header('');
     // die("Anda bukan manager");
     //jika bukan admin jangan lanjut
 }else{

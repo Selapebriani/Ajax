@@ -1,4 +1,5 @@
 <?php
+
     include 'koneksi1.php';
 
     $id = $_GET['id_post'];

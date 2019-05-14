@@ -12,7 +12,7 @@ session_start();
    $gender = $_POST['gender'];
    $website = $_POST['website'];
    $email = $_POST['email'];
-   $level=$_POST['level'];
+
    // $pass_md5=md5($pass);
    $sql = "SELECT * FROM user WHERE username = '$username'";
    $query = $db->query($sql);
@@ -28,7 +28,7 @@ echo"<div align='center'>Kode captcha salah!!! <a href='daftar.php'>Back</a></di
 }
 
       else {
-       $data = "INSERT INTO user VALUES (NULL, '$username', '$pass', '$usia', '$nim', '$jurusan', '$biografi', '$gender', '$website', '$email', '$level')";
+       $data = "INSERT INTO user VALUES (NULL, '$username', '$pass', '$usia', '$nim', '$jurusan', '$biografi', '$gender', '$website', '$email')";
        $simpan = $db->query($data);
        if($simpan) {
          echo "<div align='center'>Pendaftaran Sukses, Silahkan <a href='login.php'>Login</a></div>";

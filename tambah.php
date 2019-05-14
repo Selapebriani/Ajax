@@ -1,52 +1,35 @@
-<?php
+<?php 
 session_start();
-//cek apakah user sudah login
-if(!isset($_SESSION['username'])){
-   
-    echo "<center><h2>ANDA BELUM LOGIN</h2><a href='login.php'>Silahkan login </a> <br></center>" ;
-    die();
-}
-//cek level user
-if($_SESSION['level']!="admin"){
-  header('location:../manager.php');
-    // die("Anda bukan manager");
-    //jika bukan admin jangan lanjut
-}else{
-  $username = $_SESSION['username']; 
-  $level=$_SESSION['level'];
-}
-?>
-
+  if (isset($_SESSION['login'])) {
+    header("location: tambah_aksi.php");
+    exit;  
+  }
+ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tambah</title>
-    <link href="style1.css" rel="stylesheet" type="text/css">
+  <title>Tambah</title>
 </head>
-<body>
-    <div class="con">
-    <div class="kol1">
-    <h3>Tambah Data</h3> 
-    <br><br>
-    <form action="tambah_aksi.php" method='post'>
-        <table align="center">
-            <tr>
-                <td><input type="text" name="title" placeholder="TITLE"></td>
-                <td><input type="text" name="isi" placeholder="CONTENT"></td>
-            </tr>
-            
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center"><input type="submit" value="Simpan"></td>
-            </tr>
-        </table>
-    </form>
-    </div>
-    </div>
+<body style="background: url(s.jpg);"> 
+  <br><br>
+  <form method="POST" action="tambah_aksi.php">
+    <table align="center">
+      <tr>
+    <input type="hidden" name="waktu">
+        <td>Tittle :</td> 
+        <td>
+          <input type="text" name="title" placeholder="">
+        </td>
+      </tr>
+      <tr>
+        <td>Content :</td>
+    <td><input name="isi" placeholder=""> </td>
+    </tr>
+    <tr>
+   <td></td>
+    <td><input type="submit" name="Simpan"></td>
+   </tr>
+  </table>
+</form>
 </body>
 </html>
